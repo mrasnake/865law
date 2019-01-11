@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scaleable=no">
+<!--        <link rel="stylesheet" href="/assets/public/css/uikit.css" />
+        <script type="application/javascript" src="./assets/public/js/uikit.min.js"></script>
+        <script type="application/javascript" src="/assets/public/js/uikit-icons.min.js"></script>
+-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-tap-highlight" content="no">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
+
+    <style>
+        body{
+            background-color: blue;
+        }
+        .md-card{
+            padding: 0 0 2em 0
+        }
+
+    </style>
+
+    </head>
+    <body>
+        <div style="margin-top:5vh;">
+            <nav class="uk-navbar-container" uk-navbar style="background-color:#A9A9A9; opacity:0.5;">
+                <div class="uk-navbar-left">
+
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a href="#">Home</a></li>
+                        <li>
+                            <a href="#">Parent</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-1" style="margin:30px;">
+            <h3 class="uk-card-title">Default</h3>
+            <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </body>
+</html>
