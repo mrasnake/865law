@@ -1,115 +1,133 @@
 <!doctype html>
 <html>
     <head>
-        <title>Title</title>
+        <title>865 Law</title>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no">
 
-        <link rel="stylesheet" href="/assets/uikit/css/uikit.almost-flat.min.css" media="all">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="/assets/css/stylesOverride.css" type="text/css"> -->
 
-        <link rel="stylesheet" href="/assets/css/style_switcher.min.css" media="all">
+        <style>
+        #flyover {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          z-index: -2;
+        }
 
-        <link rel="stylesheet" href="/assets/css/main.css" media="all">
+        .overlay{
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          z-index: -1;
+          background-color: rgba(0,0,0,0.6);
+        }
 
-        <link rel="stylesheet" href="/assets/css/themes/themes_combined.min.css" media="all">
+        .navbar-dark .navbar-nav .show>.nav-link{
+          background-color: rgba(0,0,0,0.4);
+          margin: 0;
+        }
 
-        <script src="/assets/js/common.min.js"></script>
+        .dropdown-menu{
+          background-color: rgba(0,0,0,0.4);
+          border: 0;
+          border-radius: 0;
+          margin: 0;
+        }
 
-        <script src="/assets/js/live_analytics_admin_common.min.js"></script>
+        .dropdown-item{
+          color: #fff;
+          border-radius: 0;
+        }
 
-        <script src="/assets/js/uikit_custom.min.js"></script>
+        .dropdown-item:first-child {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+
+        #header_main{
+          text-align: center;
+          margin-top: 5em;
+          color: #fff;
+          font-weight: bold;
+          font-size: 4em;
+        }
+
+        #footer{
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          color: white;
+          border: 2px solid rgba(0,0,0,0.9);
+          border-radius: 6px;
+          background-color: rgba(0,0,0,0.9);
+          padding: 1em;
+          width: 100%;
+        }
+        </style>
     </head>
 
     <body class="sidebar_main_closed boxed_layout">
-        <h1 style="color:white; margin-bottom: 10px;">MATTHEW DAVID BAROCAS, P.C.</h1>
-        <video autoplay muted loop id="flyover" style="z-index:-1;  position:absolute; oject-fit: cover; top:0; left:0;">
-          <source src="/assets/media/flyover2.mp4" type="video/mp4">
+        <video autoplay muted loop id="flyover">
+          <source src="/assets/media/drone.mp4" type="video/mp4">
         </video>
-        <div class="uk-grid" data-uk-grid-margin>
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Attorneys</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resources</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Legal Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Real Estate</a>
+                  <a class="dropdown-item" href="#">Business</a>
+                  <a class="dropdown-item" href="#">Civil Litigation</a>
+                  <a class="dropdown-item" href="#">Criminal Litigation</a>
+                  <a class="dropdown-item" href="#">For Law Firms &amp; Attorney's</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-            <div class="uk-width-1-1">
-
-        <header id="header_main" style="z-index:3;">
-            <div class="header_main_content">
-                <nav class="uk-navbar">
-                    <div class="uk-float-left">
-                        <ul class="uk-navbar-nav user_actions">
-                            <li class="uk-active"><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Resources</a></li>
-                            <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
-                                <a href="#">Practice Areas</a>
-                                <div class="uk-dropdown uk-dropdown-small">
-                                    <ul class="uk-nav js-uk-prevent">
-                                        <li class="uk-active"><a href="#">Criminal Defense</a></li>
-                                        <li><a href="#">Realistate</a></li>
-                                        <li><a href="#">Debt Collection</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+        <header>
+          <h1 id="header_main">MATTHEW DAVID BAROCAS, P.C.</h1>
         </header>
 
-        <div id="page_content">
-            <div id="page_content_inner">
-                <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-1-1">
-                        <div class="md-card"  style="margin-top: 6em;">
-                        </br>
-                            <h2>Responsive, High Quality and Cost-Effective Legal Services</h2>
-                            <p>Matthew David Barocas, P.C. is a general practice law firm committed to providing responsive, high quality and cost-effective legal services in an atmosphere emphasizing creativity.</p>
-                        </br>
-                            <h2>Personal Attention On Every Case</h2>
-                            <p>Our office staff promptly returns client communications, provides our clients with regular status reports and informs clients of significant changes in the law.</p>
-                        </br>
-                            <h2>Flexible Appointment Availability</h2>
-                            <p>To set up a confidential consultation, please call Matthew David Barocas, P.C. at (865) 288-7877.</p>
-                        </br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
 
-    <footer id="footer" class="uk-visible-large" style="z-index:3;">
-        <span style="color:white;"> 2018 | MATTHEW DAVID BAROCAS, P.C. | ATTORNEY ADVERTISING Prior results do not guarantee a similar outcome.</span>
-        <!--<div class="uk-grid" data-uk-grid-margin>
-            <div class="uk-width-1-3">
-                Our Address
 
-                Matthew David Barocas, P.C.
-                First Tennessee Plaza
-                800 S. Gay St.
-                Suite 700
-                Knoxville, TN 37929
-                Office: (865) 288-7877
-                Fax: (865) 766-4101
-                E-mail: info@barocaslaw.com
-            </div>
-            <div class="uk-width-1-3">
-                <p>MATTHEW DAVID BAROCAS, P.C.
-
-                Home
-                About Us
-                Attorneys
-                Contact Us
-                </p>
-            </div>
-            <div class="uk-width-1-3">
-                <p>ATTORNEY ADVERTISING
-                    Prior results do not
-                    guarantee a similar outcome.
-                </p>
-            </div>-->
-        </footer>
+    <footer id="footer">
+        <h5> 2018 | MATTHEW DAVID BAROCAS, P.C. | ATTORNEY ADVERTISING Prior results do not guarantee a similar outcome.</h5>
+    </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
 </html>
