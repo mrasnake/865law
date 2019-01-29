@@ -3,6 +3,7 @@ package main
 import (
   "net/http"
   "log"
+  "fmt"
   "github.com/unrolled/render"
   "github.com/gorilla/mux"
 )
@@ -14,7 +15,7 @@ func main(){
   viewrender = render.New(render.Options{
     Extensions: []string{".html"},
     IsDevelopment: true,
-    //Layout: "layout",
+    Layout: "layout",
     UnEscapeHTML: true,
   })
 
@@ -22,6 +23,6 @@ func main(){
 
   http.Handle("/", router)
   log.Println("Starting server at :4000")
-  http.ListenAndServe(":4000", nil)
-
+  err := http.ListenAndServe(":4000", nil)
+  fmt.Println(err)
 }
