@@ -22,7 +22,7 @@ func main(){
   routes()
 
   http.Handle("/", router)
-  log.Println("Starting server at :4000")
-  err := http.ListenAndServe(":4000", nil)
+  log.Println("Starting server at :4040")
+  err := http.ListenAndServe(":4040", nil)
   fmt.Println(err)
 }

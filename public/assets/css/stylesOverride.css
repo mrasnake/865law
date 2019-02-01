@@ -1,6 +1,6 @@
 .wrapper{
-  margin: 4em auto 0 auto;
-  max-width: 60%;
+  margin: 3em auto 0 auto;
+  max-width: 80%;
   padding: 3em 0;
   background-color: rgba(255,255,255, 0.85);
 }
@@ -14,9 +14,9 @@
   margin: 0 auto;
 }
 
-.wrapper p{
-  padding: 0.2em 3em 0 3em;
+.homePara{
   text-align: justify;
+  padding: 0.2em 3em 0 3em;
   font-size: 1.3em;
   line-height: 1.3;
 }
@@ -28,6 +28,10 @@
 
 .navbar-dark .navbar-nav .nav-link{
   color: rgba(255,255,255,0.9);
+}
+
+.card-margin{
+  margin: 0 0.75em;
 }
 
 #header_main{
@@ -78,6 +82,23 @@
 .dropdown-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.resourcesList{
+  text-align: center;
+}
+
+.resourcesList li{
+  list-style-type: none;
+  padding: .2em 0;
+  font-size: 1.2em;
+}
+
+.contactPara{
+  text-align: center;
+  padding: 0.2em 3em 0 3em;
+  font-size: 1.3em;
+  line-height: 1.3;
 }
 
 #footer{
