@@ -7,8 +7,9 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700" rel="stylesheet">
         <link rel="stylesheet" href="/assets/css/stylesOverride.css" type="text/css">
     </head>
 
@@ -18,14 +19,12 @@
         </video>
         <div class="overlay"></div>
 
-        <header>
-          <h1 id="header_main">MATTHEW DAVID BAROCAS, P.C.</h1>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+          <a class="navbar-brand" href="#">MATTHEW DAVID BAROCAS, P.C.</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" style="float: right;">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
@@ -58,12 +57,42 @@
           </div>
         </nav>
 
+        <header>
+            <h2 class="subheader marginHeight">865LAW</h2>
+          <h1 id="header_main">MATTHEW DAVID BAROCAS, P.C.</h1>
+            <h2 class="subheader">Attorney at law</h2>
+        </header>
+
 	{{yield}}
 
 
 
     <footer id="footer">
-        <h5> 2018 | MATTHEW DAVID BAROCAS, P.C. | ATTORNEY ADVERTISING Prior results do not guarantee a similar outcome.</h5>
+        <h5>MATTHEW DAVID BAROCAS, P.C.</h5>
+        <p>We offer responsive, high quality, and cost-effective legal services with personal care and attention on every case</p>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-envelope"></i>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutUs">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/attorneys">Attorneys</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contactUs">Contact</a>
+          </li>
+        </ul>
+        <p> First Tennessee Plaza</p>
+        <p>800 S. Gay St. Suite 700 Knoxville, TN 37929</p>
+        <p>Office: (865) 288-7877 | Fax: (865) 766-4101 | E-mail: info@barocaslaw.com</p>
     </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
