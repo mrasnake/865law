@@ -2,6 +2,23 @@ body{
   font-family: 'Crimson Text', serif;
 }
 
+.subnavbar-brand{
+    margin-left: 8em;
+    margin-top: -1.5em;
+    margin-bottom: 0;
+    font-size: 1.5em;
+}
+
+
+.bwSection{
+  background-color:rgba(0,0,0,1) !important;
+  color: #fff !important;
+}
+
+.whitebackground{
+  background-color: #fff;
+}
+
 .flex-even {
   flex: 1;
 }
@@ -11,12 +28,19 @@ body{
   max-width: 100%;
 }
 
+
+.attorneysContainer{
+    max-width: 1366px;
+    /* max-width: 100%; */
+    margin: 0 auto;
+    text-align: center;
+    padding: 3em 0;
+}
 .wrapper{
   /* margin: 3em auto 0 auto;
   max-width: 80%; */
   /* background-color: rgba(255,255,255, 0.85); */
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
   margin-top: 7.4em;
 }
 
@@ -36,6 +60,45 @@ body{
   font-size: 1em;
   line-height: 1.1;
 }
+
+.formWrapper{
+    width: 80%;
+    margin: 0 auto 2em auto;
+}
+
+.btn{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactInfoList{
+  list-style-type:none;
+  /* text-align:center; */
+  padding: 0 3em;
+}
+
+.contactInfoList li{
+  /* text-decoration: underline; */
+  border-bottom: 1px solid black;
+  padding: 1em 0 0.6em 0;;
+}
+
+.map{
+  display: block;
+  border:0;
+  margin: 0 auto;
+}
+
+.formHeader{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.map{
+  margin: 0 auto;
+  position: static;
+  width: 50%;
+}
 .navbar{
   padding: 1em 2em;
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3), rgba(0,0,0,0.6));
@@ -46,6 +109,7 @@ body{
 
 .navbar-dark .navbar-nav .nav-link{
   color: rgba(255,255,255,0.9);
+  font-size: 1.25em;
 }
 
 .navbar-brand{
@@ -56,8 +120,13 @@ body{
   margin-left: 1em;
 }
 
+
+.card-title{
+  text-transform: capitalize;
+}
+
 .card-margin{
-  margin: 0 0.75em;
+  margin: 1em 0.75em;
 }
 
 #header_main{
@@ -68,8 +137,16 @@ body{
   font-size: 4.5em;
 }
 
-.marginHeight{
+.heightHome{
+    height: 50vh;
+}
+
+.marginHeightHome{
     margin-top: 3em;
+}
+
+.marginHeight{
+    margin-top: 1em;
 }
 
 .subheader{
@@ -211,8 +288,34 @@ body{
 
 #morgan{
   background-image: url(/assets/media/morgan3.jpg);
-  height: 15em;
+  height: 25em;
+  box-shadow: 4px 5px 10px rgba(0,0,0,0.4);
+  /* width: 60%; */
+  /* border-radius: 100%; */
 }
+
+#aboutImg{
+  background-image: url(/assets/media/morgan3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 22em;
+  /* box-shadow: 4px 5px 10px rgba(0,0,0,0.4); */
+  /* width: 60%; */
+  /* border-radius: 100%; */
+}
+
+#aboutImg2{
+  background-image: url(/assets/media/_DSC4126.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 22em;
+  /* box-shadow: 4px 5px 10px rgba(0,0,0,0.4); */
+  /* width: 60%; */
+  /* border-radius: 100%; */
+}
+
 
 #services{
   /* padding: 5em; */
@@ -268,18 +371,33 @@ body{
 
 .infoSection{
   text-align: justify;
-  padding: 1em 6em 0 6em;
+  padding: 2em 6em 0 6em;
+  font-size: 1.3em;
+}
+
+.infoSection p{
+  text-indent: 2em;
 }
 
 
 .resourcesList{
   text-align: center;
+  border: 6px double #000;
+  border-radius: 16px;
+  width: 30em;
+  margin: 1em 3em;
+  padding: 1em 0;
+  box-shadow: 4px 5px 10px rgba(0,0,0,0.4);
 }
 
 .resourcesList li{
   list-style-type: none;
   padding: .2em 0;
   font-size: 1.2em;
+}
+
+.resourcesList li a{
+  color: #000;
 }
 
 .contactPara{
