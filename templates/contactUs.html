@@ -19,7 +19,7 @@
       </ul>
     </div>
   <div class="col-md">
-        <form action="" method="">
+        <form action="/api/email" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
@@ -42,4 +42,39 @@
     </div>
   </div>
 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.3687149557836!2d-83.91824488441264!3d35.9624100221065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c17c154bc4c63%3A0x66e9b305340c5b2f!2sFirst+Tennessee+Plaza%2C+800+S+Gay+St%2C+Knoxville%2C+TN+37929!5e0!3m2!1sen!2sus!4v1550532530656" width="600" height="450" frameborder="0" style="" allowfullscreen></iframe>
+
+
+<!-- SAM THIS IS THE STUFF I NEED YOU TO UPDATE -->
+    <div class="col-md">
+     <label for="amount">Amount</label>
+     <input type="text" id="amount" name="amount" placeholder="$1.00">
+    <div id="paypal-button-container"></div>
 </section>
+    <script>
+    paypal.Buttons({
+    createOrder: function(data, actions) {
+      // Set up the transaction
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '0.01'
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      // Capture the funds from the transaction
+      return actions.order.capture().then(function(details) {
+        // Show a success message to your buyer
+        alert('Transaction completed by ' + details.payer.name.given_name);
+      return fetch('/paypal-transaction-complete', {
+          method: 'post',
+          body: JSON.stringify({
+            orderID: data.orderID
+          })
+        });
+
+      });
+    }
+    }).render('#paypal-button-container');
+    </script>

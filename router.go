@@ -23,4 +23,5 @@ router.HandleFunc("/criminalLitigation", criminalLitigation)
 router.HandleFunc("/lawFirms", lawFirms)
 router.HandleFunc("/resources", resources)
 router.HandleFunc("/contactUs", contactUs)
+router.HandleFunc("/api/email", emailForm)
 }
