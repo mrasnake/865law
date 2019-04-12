@@ -9,10 +9,10 @@ export TEMPLATES_FOLDER = templates
 build:
 	go build
 
-runDev:
+dev:
 	./site
 
-runProd:
+prod:
 	nohup ./site
 
 kill:

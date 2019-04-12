@@ -47,17 +47,24 @@
 <!-- SAM THIS IS THE STUFF I NEED YOU TO UPDATE -->
     <div class="col-md">
      <label for="amount">Amount</label>
-     <input type="text" id="amount" name="amount" placeholder="$1.00">
-    <div id="paypal-button-container"></div>
+     <input type="number" class="form-control" min="0.01" step="0.01" id="amount" name="amount" value="1.00" onchange="updateAmount(this.value)">
+    <div id="paypal-button-container" style="margin-top:15px"></div>
 </section>
     <script>
+    var val = "1.00"
+    
+    function updateAmount(a){
+	val = a
+	console.log(val)
+    }
+
     paypal.Buttons({
     createOrder: function(data, actions) {
       // Set up the transaction
       return actions.order.create({
         purchase_units: [{
           amount: {
-            value: '0.01'
+            value: val
           }
         }]
       });
